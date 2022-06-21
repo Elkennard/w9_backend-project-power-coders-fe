@@ -12,3 +12,8 @@ export async function getResourcesByWeek(id) {
     return result.rows;
 };
 //get all by category
+export async function getResourcesByCat(category) {
+    const result = await pool.query(`SELECT * FROM resources WHERE LOWER(category) = LOWER($1);`,[category]);
+    console.log(result);
+    return result.rows;
+};

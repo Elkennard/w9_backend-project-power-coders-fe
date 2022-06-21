@@ -10,9 +10,13 @@
     // CreateTable✅
     // PopulateTable✅
     // DeleteTable✅
+// sort crud routes/models for
+    // get all Resources✅
+    // get all by week✅
+    // get all by category✅
 // 3 files for Feedback table
     // CreateTable
     // PopulateTable
     // DeleteTable
 // Create scripts to create, populate, delete, and reset for above
-
+// STRETCH user can rate each resources out of 10 and optional message
