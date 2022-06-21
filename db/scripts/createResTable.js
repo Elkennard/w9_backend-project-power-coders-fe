@@ -5,11 +5,12 @@ async function createResTable() {
     `CREATE TABLE IF NOT EXISTS resources (
         id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
         title TEXT,
-        description TEXT,        
-        category TEXT,
-        week INT,
+        description TEXT,
+        week INT,        
+        category TEXT,        
         link TEXT,
-        image TEXT
+        author TEXT,
+        image_path TEXT
      );`
   );
   console.log(res.command);
