@@ -1,7 +1,9 @@
 import {feedback} from "../../libs/feedback.js";
 import { pool } from "../index.js";
 
-//Populates the feed table with mock data
+// Populates the feed table with mock data
+// async populates the heroku db with stuff from feedback via a for loop
+
 async function populateFeedTable() {
   const getCurrentTime = new Date();
   for (let i = 0; i < feedback.length; i++) {
@@ -12,5 +14,5 @@ async function populateFeedTable() {
     console.log(res.rows[0], "inserted.");
   }
 }
-
+//calls the function so script works
 populateFeedTable();

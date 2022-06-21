@@ -16,4 +16,6 @@ async function createResTable() {
   console.log(res.command);
 }
 
+//creates the named table above with column structure
+//calls the function so script works (below)
 createResTable();
