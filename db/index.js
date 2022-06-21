@@ -10,3 +10,4 @@ export const pool = new pg.Pool({
   port: process.env.PGPORT,
   ssl: { rejectUnauthorized: false },
 });
+

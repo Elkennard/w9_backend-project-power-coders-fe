@@ -14,7 +14,6 @@
     "db:populateFeedTable": "node -r dotenv/config ./db/scripts/populateFeedTable.js",
     "db:dropFeedTable": "node -r dotenv/config ./db/scripts/dropFeedTable.js",
     "db:resetFeedTable": "node -r dotenv/config ./db/scripts/dropFeedTable.js && node -r dotenv/config ./db/scripts/createFeedTable.js && node -r dotenv/config ./db/scripts/populateFeedTable.js"
-
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -26,6 +25,7 @@
     "pg": "^8.7.3"
   },
   "devDependencies": {
-    "jest": "^28.1.1"
+    "jest": "^28.1.1",
+    "nodemon": "^2.0.16"
   }
 }

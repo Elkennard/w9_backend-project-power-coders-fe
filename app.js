@@ -6,9 +6,10 @@ import cookieParser  from 'cookie-parser';
 import cors  from 'cors';
 import logger  from 'morgan';
 
-import usersRouter  from './routes/users.js';
+import resourcesRouter  from './routes/resources.js';
 
 const app = express();
+const port = 3000
 
 app.use(logger('dev'));
 app.use(cors());
@@ -17,7 +18,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use('/users', usersRouter);
+app.use('/resources', resourcesRouter);
+
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
+});
 
 app.use(function (req, res, next) {
   res.status(404).json({message: "We couldn't find what you were looking for 😞"})
