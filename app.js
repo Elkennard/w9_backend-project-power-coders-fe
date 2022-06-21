@@ -7,6 +7,7 @@ import cors  from 'cors';
 import logger  from 'morgan';
 
 import resourcesRouter  from './routes/resources.js';
+import feedbackRouter from './routes/feedback.js';
 
 const app = express();
 const port = 3000
@@ -19,6 +20,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use('/resources', resourcesRouter);
+app.use("/feedback", feedbackRouter);
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);

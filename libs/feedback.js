@@ -4,11 +4,11 @@ export const feedback = [
     {
         name: "Craig",
         coach: "Rikki",
-        scores: 8
+        score: 8
     },    
     {
         name: "Rajesh",
         coach: "Vicky",
-        scores: 7
+        score: 7
     }, 
 ]
