@@ -1,6 +1,7 @@
 import {resources} from "../../libs/resources.js";
 import { pool } from "../index.js";
 
+//async and takes from resourced and does for loop to generate data for the table
 async function populateResTable() {
   for (let i = 0; i < resources.length; i++) {
     const res = await pool.query(
@@ -11,4 +12,5 @@ async function populateResTable() {
   }
 }
 
+//calls the function immediately for the script
 populateResTable();

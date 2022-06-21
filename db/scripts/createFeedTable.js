@@ -11,5 +11,6 @@ async function createFeedTable() {
   );
   console.log(res.command);
 }
-
+//creates the named table above with column structure
+//calls the function so script works (below)
 createFeedTable();

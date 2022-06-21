@@ -1,3 +1,5 @@
+//placeholder resources purely to test functionality
+//needs to be replaced with actual resources
 export const resources = [
     {
         title: "Title1",
