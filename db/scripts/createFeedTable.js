@@ -4,6 +4,7 @@ async function createFeedTable() {
   const res = await pool.query(
     `CREATE TABLE IF NOT EXISTS feedback (
         bootcamper_id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+        date DATE,
         name TEXT,
         coach TEXT,        
         scores INT
