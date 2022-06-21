@@ -6,5 +6,6 @@ async function dropResTable() {
   );
   console.log(res.command);
 }
-
+//drops the named table above
+//calls the function so script works (below)
 dropResTable();

@@ -1,6 +1,7 @@
 import {feedback} from "../../libs/feedback.js";
 import { pool } from "../index.js";
 
+//async populates the heroku db with stuff from feedback via a for loop
 async function populateFeedTable() {
   for (let i = 0; i < feedback.length; i++) {
     const res = await pool.query(
@@ -10,5 +11,5 @@ async function populateFeedTable() {
     console.log(res.rows[0], "inserted.");
   }
 }
-
+//calls the function so script works
 populateFeedTable();
