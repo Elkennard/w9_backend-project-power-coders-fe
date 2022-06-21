@@ -3,6 +3,7 @@ import express from "express";
 import {
   getAllResources,
   getResourcesByWeek,
+  getResourcesByCat,
 } from '../models/resources.js';
 
 const resourcesRouter = express.Router();
@@ -27,4 +28,9 @@ resourcesRouter.get("/week/:id", async function (req, res) {
   res.json({ success: true, message: "Week resources", payload: result })
 })
 
-//by category
+// by category ✅
+// http://localhost:3000/resources/category/cat1
+resourcesRouter.get("/category/:category", async function (req, res) {
+  const result = await getResourcesByCat(req.params.category);
+  res.json({ success: true, message: "Category resources", payload: result })
+})
