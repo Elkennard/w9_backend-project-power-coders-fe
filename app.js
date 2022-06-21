@@ -8,6 +8,8 @@ import logger  from 'morgan';
 
 //imports router for the resources, it is named hence why it has been destuctured i.e {}
 import { resourcesRouter }  from './routes/resources.js';
+import feedbackRouter from './routes/feedback.js';
+
 
 const app = express();
 //we are using port 3000 by default do not change
@@ -23,6 +25,7 @@ app.use(express.static(path.join(__dirname, "public")));
 //uses localhost:3000/resources
 //and sends any requests to resourcesRouter
 app.use('/resources', resourcesRouter);
+app.use("/feedback", feedbackRouter);
 
 //DO NOT DELETE THIS, otherwise server don't work
 app.listen(port, () => {
