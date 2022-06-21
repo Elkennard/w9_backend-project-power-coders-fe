@@ -1,0 +1,18 @@
+// DB
+// Create folder and file structure ✅
+// Create DB on Heroku
+    // Add collaborators
+        // Raj✅, Emma, Dave✅, Farah
+    // environment variables in .env✅
+    // create a pool using pg✅
+        // import the env variables✅
+// 3 files for Resources table✅
+    // CreateTable✅
+    // PopulateTable✅
+    // DeleteTable✅
+// 3 files for Feedback table
+    // CreateTable
+    // PopulateTable
+    // DeleteTable
+// Create scripts to create, populate, delete, and reset for above
+
