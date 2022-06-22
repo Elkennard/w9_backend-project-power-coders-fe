@@ -1,22 +1,48 @@
-# National Bootcamp - Week Nine Project Brief
+# Mindset Toolkit Backend
 
-For your project, you’ll be using what you’ve learned on the course so far to try and improve the lives of your users. In this case, the users will be close to home: bootcampers!
+This repo contains the backend code for the SoC Mindset Toolkit Backend, which follows the RESTful API principles.
 
-To do this, you’ll need to take the time to understand your user (a bootcamper), their experiences, and their problems. Specifically, it might be good to focus on how to enhance the remote experience of a bootcamper, or what can help them with the vast amount of learning there is to do as a new developer. What do they need? What problem might they have that your application could solve for them? How can you get into the mindset of your user and keep them at the centre of your problem-solving?
+## Database
 
-The high level outcomes from this project should be:
+- Hosted in Heroku
+- 2 tables
+    - Resources
+        - *id
+        - title
+        - description
+        - week
+        - category
+        - link
+        - author
+        - image_path
+    - Feedback
+        - *feedback_id
+        - time
+        - name
+        - coach
+        - score
 
-- A minimum viable product (MVP) showcasing an innovative full stack application which meets the user need you’ve identified
-- A presentation, complete with how you worked as a team and a demonstration of the project
+## Routers
 
-Your project application might include the following:
+- Main path
+    - localhost:3000
 
-- Include a user experience created in React
-- Build a REST API which is used by your front-end
-- Be supported by a Postgresql database with multiple tables
-- Be built and managed in an agile way
-- Utilise testing for ensuring robust code
+- ResourcesRouter
+- /resources
+    - GET all resources
+- /resources/week/*week_number*
+    - GET resources by *week_number*
+- /resources/category/*category_name*
+    - GET resources by *category_name*
 
-Remember, you only have a few days to code a solution, so being agile is key. That means brainstorming what you want to build, and working in sprints to deliver value each time. After each sprint, you can reassess and either continue on course or iterate towards a better solution. Have a plan which is incremental steps, rather than all or nothing.
+- FeedbackRouter
+- /feedback
+    - POST user feedback
 
-Click the link to see the [Project Guidelines](https://github.com/SchoolOfCode/project-guidelines/blob/master/project-week.md)
+## Responses
+
+- All responses from the API return a JSON object, or an array of JSON objects, with properties key names that match the relevant table columns
+    - e.g. GET resources by week 1
+        - returns {id: VALUE, title: VALUE, description: VALUE, week: VALUE, category: VALUE, link: VALUE, author: VALUE, image_path: VALUE}
+
+        
