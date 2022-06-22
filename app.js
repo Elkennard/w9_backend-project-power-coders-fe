@@ -34,7 +34,7 @@ app.listen(port, () => {
 
 //error code for if server not working
 app.use(function (req, res, next) {
-  res.status(404).json({message: "We couldn't find what you were looking for 😞"})
+  res.status(404).json({message: "⛔ Page does not exist - please see the documentation for valid URI's 📓"})
 })
 
 app.use(function (err, req, res, next) {
