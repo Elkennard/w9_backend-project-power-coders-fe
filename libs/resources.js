@@ -7,7 +7,7 @@ export const resources = [
       "SoC is designed to challenge you. There may be times of doubt and uncertainty. But the struggle is part of the challenge. This is an opportunity to do cool things, have experiences, connect with new people.\n \n - Use the support\n - Stay focused\n - Keep moving forward\n - Lean into the experience\n \n You decide whether you think feedback is important\n \n Your ego will mess with you – endeavour to find authentic confidence\n \n When receiving feedback – stay curious\n \n When giving feedback – check your motive\n \n The biggest test of all is to listen proactively to a ‘Jerk’ (though there are fewer than you think!)",
     week: 1,
     category: "Resilience",
-    link: "https://www.mybestself101.org/blog/2021/2/2/adventure-mindset-the-hero's-journey",
+    link: "https://www.mybestself101.org/blog/2021/2/2/adventure-mindset-the-heros-journey",
     author: "Joseph Trodden",
     image_path: "1_hero_journey.png",
   },

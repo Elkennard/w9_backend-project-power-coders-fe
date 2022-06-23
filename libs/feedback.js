@@ -8,7 +8,7 @@ export const feedback = [
     },    
     {
         name: "Rajesh",
-        coach: "Vicky",
+        coach: "Vicki",
         score: 7
     }, 
 ]
