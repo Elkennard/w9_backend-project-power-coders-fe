@@ -37,6 +37,7 @@ This repo contains the backend code for the SoC Mindset Toolkit Backend, which f
 
 - FeedbackRouter
 - /feedback
+    - GET all feedback
     - POST user feedback
 
 ## Responses

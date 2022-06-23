@@ -13,7 +13,7 @@ import feedbackRouter from './routes/feedback.js';
 
 const app = express();
 //we are using port 3000 by default do not change
-const port = 3000
+const port = 3001
 
 app.use(logger('dev'));
 app.use(cors());
