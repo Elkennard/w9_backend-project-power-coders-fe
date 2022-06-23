@@ -28,9 +28,11 @@ app.use('/resources', resourcesRouter);
 app.use("/feedback", feedbackRouter);
 
 //DO NOT DELETE THIS, otherwise server don't work
+if (process.env.NODE_ENV !== 'test') {
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
+}
 
 //error code for if server not working
 app.use(function (req, res, next) {

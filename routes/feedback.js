@@ -9,7 +9,7 @@ const feedbackRouter = express.Router();
 
 feedbackRouter.post("/", async function (req, res) { 
     const result = await postUserFeedback(req.body);
-    res.json({ success: true, message: "Feedback posted", payload: result })
+    res.status(201).json({ success: true, message: "Feedback posted", payload: result })
 })
 
 feedbackRouter.get("/", async function (req, res) {

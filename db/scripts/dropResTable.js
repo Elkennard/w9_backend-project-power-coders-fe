@@ -1,11 +1,11 @@
 import { pool } from "../index.js";
+import { dropResTable } from "../helpers.js";
 
-async function dropResTable() {
-  const res = await pool.query(
-    `DROP TABLE IF EXISTS resources;`
-  );
-  console.log(res.command);
+try {
+  await dropResTable();
+  console.log("Dropped 'resources' table");
+} catch (err) {
+  console.error(err);
+} finally {
+  await pool.end();
 }
-//drops the named table above
-//calls the function so script works (below)
-dropResTable();

@@ -1,17 +1,12 @@
 import { pool } from "../index.js";
+import { createFeedTable } from "../helpers.js";
 
-async function createFeedTable() {
-  const res = await pool.query(
-    `CREATE TABLE IF NOT EXISTS feedback (
-        feedback_id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
-        time TIMESTAMP,
-        name TEXT,
-        coach TEXT,        
-        score INT
-     );`
-  );
-  console.log(res.command);
+try {
+  await createFeedTable();
+  console.log("Created 'feedback' table");
+} catch (err) {
+  console.error(err);
+} finally {
+  await pool.end();
 }
-//creates the named table above with column structure
-//calls the function so script works (below)
-createFeedTable();
+
