@@ -13,9 +13,9 @@ describe("GET /resources", () => {
   it("checks if the status code is 200", async () => {
     //ARRANGE
     const response = await request(app).get("/resources/");
-    console.log(response);
+   
     const actual = response.status;
-    console.log(actual);
+   
     //ACT
     const expected = 200;
     //ASSERT

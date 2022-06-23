@@ -1,12 +1,11 @@
 import { pool } from "../index.js";
+import { dropFeedTable } from "../helpers.js";
 
-async function dropFeedTable() {
-  const res = await pool.query(
-    `DROP TABLE IF EXISTS feedback;`
-  );
-  console.log(res.command);
+try {
+  await dropFeedTable();
+  console.log("Dropped 'feedback' table");
+} catch (err) {
+  console.error(err);
+} finally {
+  await pool.end();
 }
-
-//drops the named table above
-//calls the function so script works (below)
-dropFeedTable();
