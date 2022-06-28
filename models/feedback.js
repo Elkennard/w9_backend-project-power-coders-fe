@@ -1,16 +1,20 @@
 import { pool } from "../db/index.js";
 
-// POST user feedback
-//  will post current timestamp to date column
-
 export async function postUserFeedback(feedback) {
-    console.log(feedback);
-    const getCurrentTime = new Date();
-    const result = await pool.query(`INSERT INTO feedback (time, name, coach, score) VALUES ($1, $2, $3, $4) RETURNING *;`, [getCurrentTime, feedback.name, feedback.coach, feedback.score]);
-    return result.rows;
+  const SQL_STRING = `INSERT INTO feedback (time, name, coach, score) VALUES ($1, $2, $3, $4) RETURNING *;`;
+  const GET_CURRENT_TIME = new Date();
+  const VALUES = [
+    GET_CURRENT_TIME,
+    feedback.name,
+    feedback.coach,
+    feedback.score,
+  ];
+  const RESULT = await pool.query(SQL_STRING, VALUES);
+  return RESULT.rows;
 }
 
-export async function getUserFeedback() {    
-       const result = await pool.query(`SELECT * FROM feedback`);
-    return result.rows;
+export async function getUserFeedback() {
+  const SQL_STRING = `SELECT * FROM feedback`;
+  const RESULT = await pool.query(SQL_STRING);
+  return RESULT.rows;
 }

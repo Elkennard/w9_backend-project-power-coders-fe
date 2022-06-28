@@ -1,6 +1,4 @@
-//placeholder resources purely to test functionality
-//needs to be replaced with actual resources
-export const resources = [
+export const RESOURCES = [
   {
     title: "Hero's Journey",
     description:

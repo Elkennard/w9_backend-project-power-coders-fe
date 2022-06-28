@@ -1,6 +1,6 @@
 import { pool } from "./index.js";
-import { resources } from "../libs/resources.js";
-import { feedback } from "../libs/feedback.js";
+import { RESOURCES } from "../libs/resources.js";
+import { FEEDBACK } from "../libs/feedback.js";
 
 export async function createResTable() {
   const SQL_STRING = `CREATE TABLE IF NOT EXISTS resources (
@@ -26,15 +26,15 @@ export async function dropResTable() {
 export async function populateResTable() {
   const SQL_STRING = `INSERT INTO resources (title, description, week, category, link, author, image_path) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *`;
 
-  for (let i = 0; i < resources.length; i++) {
+  for (let i = 0; i < RESOURCES.length; i++) {
     const VALUES = [
-      resources[i].title,
-      resources[i].description,
-      resources[i].week,
-      resources[i].category,
-      resources[i].link,
-      resources[i].author,
-      resources[i].image_path,
+      RESOURCES[i].title,
+      RESOURCES[i].description,
+      RESOURCES[i].week,
+      RESOURCES[i].category,
+      RESOURCES[i].link,
+      RESOURCES[i].author,
+      RESOURCES[i].image_path,
     ];
     const RES = await pool.query(SQL_STRING, VALUES);
     console.log(RES.rows[0], "inserted.");
@@ -70,12 +70,12 @@ export async function dropFeedTable() {
 export async function populateFeedTable() {
   const GET_CURRENT_TIME = new Date();
   const SQL_STRING = `INSERT INTO feedback (time, name, coach, score) VALUES ($1, $2, $3, $4) RETURNING *;`;
-  for (let i = 0; i < feedback.length; i++) {
+  for (let i = 0; i < FEEDBACK.length; i++) {
     const VALUES = [
       GET_CURRENT_TIME,
-      feedback[i].name,
-      feedback[i].coach,
-      feedback[i].score,
+      FEEDBACK[i].name,
+      FEEDBACK[i].coach,
+      FEEDBACK[i].score,
     ];
     const RES = await pool.query(SQL_STRING, VALUES);
     console.log(RES.rows[0], "inserted.");
