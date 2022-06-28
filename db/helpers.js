@@ -2,6 +2,8 @@ import { pool } from "./index.js";
 import { RESOURCES } from "../libs/resources.js";
 import { FEEDBACK } from "../libs/feedback.js";
 
+/* logic for db scripts has been abstracted into this helpers file - this is to stop the db functions being called automatically when being tested */
+
 export async function createResTable() {
   const SQL_STRING = `CREATE TABLE IF NOT EXISTS resources (
       id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
