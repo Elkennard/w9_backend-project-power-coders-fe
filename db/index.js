@@ -1,7 +1,9 @@
-//uses npm to use postgresql in JS
 import pg from "pg";
 
-// created pool here which connects to .env file
+/* Uses a pool instead of client to allow multiple connections
+
+You need to create a .env file to store database credentials */
+
 export const pool = new pg.Pool({
   user: process.env.PGUSER,
   host: process.env.PGHOST,
