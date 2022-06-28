@@ -1,5 +1,5 @@
 
-![Logo]([https://github.com/SchoolOfCode/w9_backend-project-power-coders-fe/tree/main/public/images/logo.PNG](https://github.com/SchoolOfCode/w9_backend-project-power-coders-fe/blob/main/public/images/logo.PNG?raw=true))
+![Logo](https://raw.githubusercontent.com/SchoolOfCode/w9_backend-project-power-coders-fe/main/public/images/logo.PNG)
 
 # SOC WELLBEING TOOLKIT - BACK-END
 
