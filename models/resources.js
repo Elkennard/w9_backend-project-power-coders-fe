@@ -6,16 +6,16 @@ export async function getAllResources() {
   return RESULT.rows;
 }
 
-export async function getResourcesByWeek(id) {
+export async function getResourcesByWeek(weekNumber) {
   const SQL_STRING = `SELECT * FROM resources WHERE week = $1;`;
-  const VALUES = [id];
+  const VALUES = [weekNumber];
   const RESULT = await pool.query(SQL_STRING, VALUES);
   return RESULT.rows;
 }
 
-export async function getResourcesByCat(category) {
+export async function getResourcesByCategory(categoryName) {
   const SQL_STRING = `SELECT * FROM resources WHERE LOWER(category) = LOWER($1);`;
-  const VALUES = [category];
+  const VALUES = [categoryName];
   const RESULT = await pool.query(SQL_STRING, VALUES);
   return RESULT.rows;
 }
