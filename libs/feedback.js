@@ -1,12 +1,12 @@
 export const FEEDBACK = [
   {
     name: "Craig",
-    coach: "Rikki",
-    score: 8,
+    coach: "Rikkiah Williams",
+    score: 4,
   },
   {
     name: "Rajesh",
-    coach: "Vicki",
-    score: 7,
+    coach: "Victoria Meah",
+    score: 3,
   },
 ];
