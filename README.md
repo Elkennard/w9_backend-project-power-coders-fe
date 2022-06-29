@@ -10,6 +10,7 @@ This is the back-end documentation for the app.
 The back-end creates and populates tables on a postgres database.  It also serves as an API for the front-end. 
 
 Looking for the [Front-end?](https://github.com/SchoolOfCode/w9_frontend-project-power-coders-fe)
+
 ## Installation
 
 ```bash
@@ -52,7 +53,6 @@ To run the back end:
 ```bash
   npm run dev
 ```
-
 
 ## API Reference
 
@@ -221,10 +221,15 @@ To run the back end:
 
 ```
 
+## Roadmap
 
-
+### Stretch Goals
+- Additional ‘users’ table to store user data in DB
+- Additional models and routes to facilitate logins using the users table
 
 ## Running Tests
+
+Currently implemented test suites check all CRUD operations on both routers (resources and feedback) and assert that the status code and data received is as expected.
 
 To run tests, run the following command
 
@@ -232,11 +237,9 @@ To run tests, run the following command
   npm run test
 ```
 
-
 ## Tech Stack
 
-**Server:** Node, Express, PostgreSQL
-
+**Server:** Node, Express, PostgreSQL, Jest, Supertest
 
 ## Appendix
 
@@ -245,6 +248,14 @@ CRUD routes currently not used by Front-end:
 - Get /resources
 - Get /resources/category/${categoryName}
 - Get /feedback
+
+### DB Schema
+
+![db_schema](/public/images/db_schema.png)
+
+### Client/Server Interaction
+
+![stack_interaction](/public/images/stack_interaction.png)
 
 
 ## Authors
