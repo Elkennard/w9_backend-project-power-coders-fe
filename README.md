@@ -1,5 +1,5 @@
 
-![Logo](/public/images/logo.png)
+![Logo](https://raw.githubusercontent.com/SchoolOfCode/w9_backend-project-power-coders-fe/main/public/images/logo.PNG)
 
 # SOC WELLBEING TOOLKIT - BACK-END
 
@@ -60,7 +60,7 @@ To run the back end:
 
 #### Get all resources
 
-```http
+```
   GET /resources
 ```
 
@@ -88,7 +88,7 @@ To run the back end:
 
 #### Get all resources by week
 
-```http
+```
   GET /resources/week/${weekNumber}
 ```
 
@@ -117,7 +117,7 @@ To run the back end:
 
 #### Get all resources by category
 
-```http
+```
   GET /resources/category/${categoryName}
 ```
 
@@ -148,7 +148,7 @@ To run the back end:
 
 #### Create new feedback post
 
-```http
+```
   POST /feedback
 ```
 
@@ -186,7 +186,7 @@ To run the back end:
 
 #### Get all feedback
 
-```http
+```
   GET /feedback
 ```
 
