@@ -24,7 +24,7 @@ APP.use("/resources", RESOURCES_ROUTER);
 APP.use("/feedback", FEEDBACK_ROUTER);
 
 if (process.env.NODE_ENV !== "test") {
-  APP.listen(PORT, () => {
+  APP.listen(process.env.PGPORT || 3001, () => {
     console.log(`Listening on PORT ${PORT}`);
   });
 }
