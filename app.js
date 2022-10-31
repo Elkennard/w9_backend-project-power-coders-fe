@@ -11,7 +11,7 @@ import FEEDBACK_ROUTER from "./routes/feedback.js";
 
 const APP = express();
 // 3000 is the front-end port
-const PORT = 3001;
+// const PORT = 3001;
 
 APP.use(logger("dev"));
 APP.use(cors());
@@ -25,7 +25,7 @@ APP.use("/feedback", FEEDBACK_ROUTER);
 
 if (process.env.NODE_ENV !== "test") {
   APP.listen(process.env.PGPORT || 3001, () => {
-    console.log(`Listening on PORT ${PORT}`);
+    console.log(`Listening`);
   });
 }
 
