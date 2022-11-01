@@ -12,8 +12,7 @@ import { appendFile } from "fs";
 
 const APP = express();
 // 3000 is the front-end port
-const host = '0.0.0.0';
-const PORT = process.env.PGPORT || '3001';
+const PORT = 3001;
 
 APP.set("port", PORT);
 
@@ -28,8 +27,8 @@ APP.use("/resources", RESOURCES_ROUTER);
 APP.use("/feedback", FEEDBACK_ROUTER);
 
 if (process.env.NODE_ENV !== "test") {
-  APP.listen(process.env.PGPORT || '0.0.0.0', () => {
-    console.log(`Listening`);
+  APP.listen(3001, () => {
+    console.log(`Listening on ${PORT}`);
   });
 }
 
