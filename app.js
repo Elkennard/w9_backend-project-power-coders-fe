@@ -11,6 +11,7 @@ import FEEDBACK_ROUTER from "./routes/feedback.js";
 
 const APP = express();
 // 3000 is the front-end port
+const host = '0.0.0.0';
 const PORT = process.env.PGPORT || 3001;
 
 APP.use(logger("dev"));
