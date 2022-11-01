@@ -1,2 +1,2 @@
-web: npm start
-worker: YOUR_COMMAND
+web: node app.js
+worker: npm start
