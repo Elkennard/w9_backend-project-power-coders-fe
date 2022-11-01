@@ -15,7 +15,7 @@ const APP = express();
 const host = '0.0.0.0';
 const PORT = process.env.PGPORT || '3001';
 
-app.set("port", PORT);
+APP.set("port", PORT);
 
 APP.use(logger("dev"));
 APP.use(cors());
