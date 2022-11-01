@@ -8,13 +8,10 @@ import logger from "morgan";
 
 import { RESOURCES_ROUTER } from "./routes/resources.js";
 import FEEDBACK_ROUTER from "./routes/feedback.js";
-import { appendFile } from "fs";
 
 const APP = express();
 // 3000 is the front-end port
-const PORT = 3001;
-
-APP.set("port", PORT);
+const PORT = process.env.PORT || 3000;
 
 APP.use(logger("dev"));
 APP.use(cors());
@@ -27,8 +24,8 @@ APP.use("/resources", RESOURCES_ROUTER);
 APP.use("/feedback", FEEDBACK_ROUTER);
 
 if (process.env.NODE_ENV !== "test") {
-  APP.listen(3001, () => {
-    console.log(`Listening on ${PORT}`);
+  APP.listen(PORT, () => {
+    console.log(`Listening on PORT ${PORT}`);
   });
 }
 
