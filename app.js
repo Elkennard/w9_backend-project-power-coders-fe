@@ -25,7 +25,7 @@ APP.use("/resources", RESOURCES_ROUTER);
 APP.use("/feedback", FEEDBACK_ROUTER);
 
 if (process.env.NODE_ENV !== "test") {
-  APP.listen(process.env.PGPORT || 3001, () => {
+  APP.listen(process.env.PGPORT || '0.0.0.0', () => {
     console.log(`Listening`);
   });
 }
