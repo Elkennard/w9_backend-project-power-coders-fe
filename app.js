@@ -8,11 +8,14 @@ import logger from "morgan";
 
 import { RESOURCES_ROUTER } from "./routes/resources.js";
 import FEEDBACK_ROUTER from "./routes/feedback.js";
+import { appendFile } from "fs";
 
 const APP = express();
 // 3000 is the front-end port
 const host = '0.0.0.0';
-const PORT = process.env.PGPORT || 3001;
+const PORT = process.env.PGPORT || '3001';
+
+appendFile.set("port", PORT);
 
 APP.use(logger("dev"));
 APP.use(cors());
